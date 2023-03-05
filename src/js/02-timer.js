@@ -9,7 +9,6 @@ const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
 
-
 let date = new Date();
 let selectedDate;
 
@@ -53,7 +52,6 @@ function startTimer(evt) {
 startBtn.addEventListener('click', startTimer);
 
 function convertMs(ms) {
- 
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
