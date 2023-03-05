@@ -28,6 +28,7 @@ const options = {
       startBtn.disabled = false;
       selectedDate = selectedDates[0];
       console.log(selectedDate);
+      
     }
   },
 };
@@ -35,8 +36,9 @@ const options = {
 flatpickr(inputText, options);
 
 function startTimer(evt) {
+  startBtn.disabled = true;
+  inputText.disabled = true;
   const intervalId = setInterval(() => {
-    startBtn.disabled = true;
     let now = Date.now();
     let diff = selectedDate.getTime() - now;
     console.log(selectedDate.getTime());
